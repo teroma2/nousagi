@@ -1,0 +1,29 @@
+{
+  "name": "nousagi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/teroma2/nousagi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teroma2/nousagi/issues"
+  },
+  "homepage": "https://github.com/teroma2/nousagi#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "node-sass": "^3.4.2"
+  }
+}
