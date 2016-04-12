@@ -1,0 +1,71 @@
+/*
+ Theme Name:   HARES test
+ Theme URI:    
+ Description:  Twenty Sixteen Child Theme
+ Author:       Kayoko Yoshimatsu
+ Author URI:   http://teroma2.tumblr.com
+ Template:     twentysixteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-sixteen-child
+*/
+@charset "UTF-8";
+body {
+  font-size: 16px;
+}
+
+body, button, input, select, textarea,
+.entry-title,           /* 以下、明示指定されているものを上書き */
+.main-navigation,       /* 画面右上のメニュー */
+.comment-metadata,      /* コメントの日付 */
+.comment-reply-link,    /* コメントの返信ボタン */
+input[type="submit"],   /* 送信ボタン */
+.post-navigation,       /* 投稿単位のページナビゲーション */
+.post-navigation .post-title,
+.post-navigation div + div,
+.comments-title,        /* コメント */
+.comment-reply-title,
+.comment-notes,
+.comment-form label,
+.widget .widget-title,
+.logged-in-as {
+  font-family: "Roboto Slab", Garamond, "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro W3", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+.post-navigation,
+.post-navigation .post-title,
+.post-navigation div + div {
+  border-style: none;
+  font-size: 1.0rem;
+  font-weight: 400;
+}
+
+.nav-next {
+  text-align: right;
+}
+
+.post-navigation a,
+.post-navigation .meta-nav {
+  padding: 0rem;
+  line-height: 1;
+  margin: 0rem;
+}
+
+.navigation {
+  border-top: medium solid #6495ed;
+  border-bottom: thin solid #6495ed;
+  padding: 0.5rem 0;
+}
+
+/* ----------ウィジェット---------- */
+.widget {
+  border-top: none;
+}
+
+/* ----------ヘッダー---------- */
+/* 検索窓 */
+.search-submit {
+  background: #ccc;
+}
