@@ -10,7 +10,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header"><!-- .entry-header -->
+		<?php twentysixteen_post_thumbnail(); ?>
+
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+		<?php twentysixteen_excerpt(); ?>
+
 	</header><!-- /.entry-header -->
 
 	<footer class="entry-footer"><!-- .entry-footer -->
@@ -18,14 +23,10 @@
 	</footer><!-- /.entry-footer -->
 
 
-	<?php twentysixteen_excerpt(); ?>
-
-	<?php twentysixteen_post_thumbnail(); ?>
 
 	<div class="entry-content">
+		<?php the_content(); ?>
 		<?php
-			the_content();
-
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
 				'after'       => '</div>',
@@ -39,6 +40,7 @@
 				get_template_part( 'template-parts/biography' );
 			}
 		?>
+
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
