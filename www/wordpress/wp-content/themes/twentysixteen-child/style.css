@@ -78,23 +78,61 @@ input[type="submit"],   /* 送信ボタン */
   border-top: none;
 }
 
+/* ----------ベース---------- */
+/* レイアウト */
+.site {
+  margin: 0;
+}
+.site-content {
+  margin: 20px;
+}
+/* リンクカラー */
+a {
+  color: #000;
+}
+a:hover, a:active, a:focus {
+  color: #999999;
+}
+
+
+/* リセット */
+li, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
 /* ----------ヘッダー---------- */
 
 .site-header {
-  padding: 30px;
+  padding: 0;
 }
 .site-header .primary-menu {
+  border: none;
   display: flex;
 }
 .site-header .primary-menu li{
   float: none;
+  background: #b2f1f1;
+  padding: 0 30px;
 }
+.site-header .primary-menu li a {
+  display: block;
+}
+.site-header-menu .social-navigation {
+    display: none;
+  }
 .social-navigation a {
   border: none;
 }
 
 .site-header-main {
   display: flex;
+}
+.site-header-menu {
+  display: block;
 }
 .site-branding {
   margin: 0 30px 0 0;
@@ -107,6 +145,13 @@ input[type="submit"],   /* 送信ボタン */
 .site-header-search {
 }
 
+.menu-toggle {
+  display: none;
+}
+
+.main-navigation li {
+  border: none;
+}
 /* フォーム部品 */
 /**
  * 5.0 - Forms
@@ -272,6 +317,9 @@ width: calc(100% - 42px);
   margin: 0 0 30px;
   padding: 0;
 }
+.entry-footer {
+  width: 100%;
+}
 /* ページャー */
 
 
@@ -279,8 +327,179 @@ width: calc(100% - 42px);
 /* ----------サイドバー---------- */
 /* 投稿 */
 
+/* ピックアップ */
+.list-entry-pickup {
+  display: flex;
+  width: 1200px;
+}
+.list-item-entry {
+
+  width: 300px;
+}
+.list-entry-thumbnail {
+  margin: 0 0 30px;
+}
+.list-entry-thumbnail img {
+  max-width: 300px;
+}
+.list-entry-information {
+}
+.list-entry-information-sub {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin: 0 0 20px;
+}
+.list-entry-category {
+  padding: 0;
+  margin: 0;
+}
+.list-entry-category a {
+  background: #def6f9;
+  color: #666;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+.list-entry-title {
+  font-size: 160%;
+  padding: 0;
+  line-height: 1.4;
+  margin: 0;
+}
+.list-entry-date {
+  font-size: 14px;
+  color: #999;
+}
+
+
+
 /* ----------フッター---------- */
 /* コピーライト */
 /* コピーライト */
 
+
+/* ----------------------------------
+               smartphone
+---------------------------------- */
+@media (max-width: 767px) {
+
+  /* ベース */
+  .site-header {
+    padding: 0;
+  }
+  .site-content .sidebar {
+    padding: 0;
+  }
+
+  /* ヘッダー */
+  .site-header .main-navigation {
+    padding: 0;
+    overflow: hidden;
+  }
+  .site-header .main-navigation ul ul {
+    display: block;
+  }
+  .site-header .main-navigation li {
+  }
+  .site-header .menu-header-navigation-container {
+    height: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+  .site-header .primary-menu {
+    border: none;
+    display: inline-table;
+    height: 80px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .site-header .primary-menu li {
+    display: table-cell;
+  }
+  .current-menu-item {
+    border-bottom: 4px solid #ccc;
+  }
+  .dropdown-toggle:after {
+    border: none;
+  }
+  .dropdown-toggle:after, .dropdown-toggle.toggled-on:after {
+    content: none;
+  }
+
+/* navigation_sp*/
+  .navigation_sp_wrap {
+    height: 5em;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .navigation_sp {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .navigation_sp li {
+    width: 300px;
+  }
+  .navigation_sp a {
+    padding: 0 20px;
+    display: block
+  }
+  .navigation_sp .children {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: #ffcc00;
+  }
+    .navigation_sp .children li {
+      padding: 0;
+    }
+    .navigation_sp .children a {
+      width: 200px;
+    }
+/* テスト */
+.wrap {
+  background-color: #fff;
+  overflow: hidden;
+  height: 3em;
+  width: 100%;
+}
+ .mask {
+  height: 5em;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+ .list {
+  display: inline-table;
+  margin: 0 auto;
+  max-width: 100%;
+}
+ .list li {
+  display: table-cell;
+}
+ .list a {
+  display: block;
+  padding: 0 1em;
+  text-decoration: none;
+  color: #333;
+  height: 3em;
+  line-height: 3;
+}
+ .list a:hover {
+  border-bottom: 2px solid black;
+  background-color: #f9f9f9;
+}
+
+
+
+}/* /smartphone */
 

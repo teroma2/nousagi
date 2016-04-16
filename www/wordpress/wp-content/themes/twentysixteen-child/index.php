@@ -18,9 +18,9 @@
 <?php get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">トップだけかな？
+		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>記事ページ
+		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
 				<header>
@@ -52,12 +52,18 @@
 		// If no content, include the "No posts found" template.
 		else :
 			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
 		?>
+
+		<?php endif; ?>
+
+			<!-- .top-sidebar -->
+			<div class="top-sidebar">
+				<?php get_sidebar(); ?>
+			</div>
+			<!-- /.top-sidebar -->
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

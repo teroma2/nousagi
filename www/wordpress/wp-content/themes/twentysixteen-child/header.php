@@ -20,6 +20,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+  <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/common.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -62,6 +63,114 @@
 								 ) );
 							?>
 						</nav>
+<nav class="main-navigation">
+	<div class="menu-header-navigation-container">
+    <ul id="menu-header-navigation" class="primary-menu">
+<?php
+$args=array(
+  'hide_empty' => '0',
+  'orderby' => 'name',
+  'order' => 'ASC'
+  );
+$categories=get_categories($args);
+  foreach($categories as $category) { 
+    echo '<li class=""><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> </li> ';
+  } 
+?>
+		</ul>
+	</div>
+</nav>
+
+ーーーー
+<!-- test -->
+  <div class="mask">
+    <ul class="list">
+      <li><a href="/">Alpha</a></li>
+      <li><a href="/">Beta</a></li>
+      <li><a href="/">Gamma</a></li>
+      <li><a href="/">Delta</a></li>
+      <li><a href="/">Alpha</a></li>
+      <li><a href="/">Beta</a></li>
+      <li><a href="/">Gamma</a></li>
+      <li><a href="/">Delta</a></li>
+      <li><a href="/">Alpha</a></li>
+      <li><a href="/">Beta</a></li>
+      <li><a href="/">Gamma</a></li>
+      <li><a href="/">Delta</a></li>
+    </ul>
+  </div>
+<!-- /test -->
+ーーー
+<!-- 自作ナビゲーション -->
+▼ここ
+<nav class="nav_sp">
+	<div class="navigation_sp_wrap">
+		<ul class="navigation_sp">
+			<li class="cat-item">
+				<a href="<?php echo home_url('/column'); ?>">INTERVIEW</a>
+			</li>
+			<li class="cat-item">
+				<ul class="children">
+					<li class="cat-item"><a href="<?php echo home_url('/column/side-business-column/'); ?>">副業</a>
+					</li>
+						<li class="cat-item"><a href="<?php echo home_url('/column/column-child-care/'); ?>">子育て</a>
+					</li>
+				</ul>
+			</li>
+			<li class="cat-item">
+				<a href="<?php echo home_url('/column'); ?>">JOBS</a>
+				<ul class="children">
+					<li class="cat-item"><a href="<?php echo home_url('/column/side-business-column/'); ?>">副業</a>
+					</li>
+						<li class="cat-item"><a href="<?php echo home_url('/column/column-child-care/'); ?>">子育て</a>
+					</li>
+					<li class="cat-item"><a href="<?php echo home_url('/column/side-business-column/'); ?>">副業</a>
+					</li>
+						<li class="cat-item"><a href="<?php echo home_url('/column/column-child-care/'); ?>">子育て</a>
+					</li>
+				</ul>
+			</li>
+			<li class="cat-item">
+				<a href="<?php echo home_url('/column'); ?>">COLUMN</a>
+				<ul class="children">
+					<li class="cat-item"><a href="<?php echo home_url('/column/side-business-column/'); ?>">副業</a>
+					</li>
+						<li class="cat-item"><a href="<?php echo home_url('/column/column-child-care/'); ?>">子育て</a>
+					</li>
+				</ul>
+			</li>
+			<li class="cat-item">
+				<a href="<?php echo home_url('/column'); ?>">NEWS</a>
+				<ul class="children">
+					<li class="cat-item"><a href="<?php echo home_url('/column/side-business-column/'); ?>">メディア露出情報</a>
+					</li>
+						<li class="cat-item"><a href="<?php echo home_url('/column/column-child-care/'); ?>">HARESニュース</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+ああああ
+<nav class="nav_sp">
+<div class="navigation_sp_wrap">
+<ul class="navigation_sp">
+<?php 
+    $args = array(
+	'child_of'           => 0,
+	'hide_empty'         => 0,
+	'title_li'           => __( '' )
+    );
+    wp_list_categories( $args );
+?>
+</ul>
+</div>
+</nav>
+▲まで
+<!-- /自作ナビゲーション -->
+
+
+
 						<!-- /.main-navigation -->
 					<?php endif; ?>
 

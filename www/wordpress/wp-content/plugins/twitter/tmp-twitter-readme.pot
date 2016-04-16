@@ -1,0 +1,277 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "Twitter"
+msgstr ""
+
+#. Short description.
+msgid "Official Twitter, Vine, and Periscope plugin for WordPress. Embed content and grow your audience. Requires PHP 5.4 or greater."
+msgstr ""
+
+#. Screenshot description.
+msgid "Settings screen. Customize Tweet and Timeline color schemes including background, text colors, and borders. Attribute site content to a Twitter account. Automatically include Tweet buttons alongside your post content."
+msgstr ""
+
+#. Screenshot description.
+msgid "Post editor meta box. Define custom Tweet text, hashtags, and Twitter Card data."
+msgstr ""
+
+#. Screenshot description.
+msgid "Embed single Tweets, Tweets with video templates, multiple Tweets in a grid format, Twitter Moments, and Vines."
+msgstr ""
+
+#. Found in description header.
+msgid "Embed Twitter content"
+msgstr ""
+
+#. Found in description header.
+msgid "Embed a Vine"
+msgstr ""
+
+#. Found in description header.
+msgid "Add a Tweet button to public posts"
+msgstr ""
+
+#. Found in description header.
+msgid "Enable link previews and Twitter bylines with Twitter Cards"
+msgstr ""
+
+#. Found in description header.
+msgid "Twitter follow button"
+msgstr ""
+
+#. Found in description header.
+msgid "Periscope On Air button"
+msgstr ""
+
+#. Found in description header.
+msgid "Associate WordPress accounts with Twitter and Periscope identities"
+msgstr ""
+
+#. Found in description header.
+msgid "Add an advertising pixel with a shortcode"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "The Twitter plugin for WordPress makes it easy to embed single Tweets, multiple Tweets, a Moment, or a Vine on your website. Improve the reach of your content with the Tweet button and populate rich link previews on Twitter with automatically-generated Twitter Card markup. Help your audience follow your latest updates with the Twitter follow button and Periscope On Air button."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "All features are deeply integrated with WordPress APIs to make building your webpages and administrative features as easy as possible with the extensibility you expect from WordPress. The plugin is multisite-aware, supports post meta customizations through the WordPress REST API, and shortcode customizations through shortcode UI."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Requires PHP version 5.4 or greater."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Embed a <a href=\"https://dev.twitter.com/web/embedded-tweets\">single Tweet</a>, <a href=\"https://dev.twitter.com/web/embedded-video\">single Tweet with video template</a>, <a href=\"https://dev.twitter.com/web/embedded-moments\" title=\"Twitter Moment\">Moment</a>, or <a href=\"https://dev.twitter.com/web/embedded-timelines/collection\">Twitter collection</a> grid template by pasting a URL into your article content. Customize advanced options using a shortcode."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Choose a light or dark theme, customize link and border colors, and configure other widget template options through your site's WordPress administrative interface."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "The plugin automatically customizes embed HTML to match the locale or your site, optimally enqueues Twitter's widgets JavaScript for fast loading and extensibility, and handles advanced cases such as articles loaded asynchronously via the WordPress API."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Embed a Vine by pasting a URL into your article content. Customize advanced options using a shortcode."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "The plugin optimally enqueues Vine's embed JavaScript to handle unpausing and unmuting videos as they become visible on the page."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Add a Tweet button to public posts to encourage your visitors to share your content on Twitter. The Tweet button automatically constructs share text, URLs, and shares your site's Twitter account in the Tweet. Visitors may see recommended accounts to follow after posting your content, including your site's specified accounts."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Customize the pre-populated share text and hashtags shown in a Tweet composer for each post from your site's post editor."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "The plugin automatically generates <a href=\"https://dev.twitter.com/cards/overview\">Twitter Card</a> markup to populate link previews on Twitter and attribute articles to a site and author Twitter account. Increase engagement with your content and related Twitter accounts."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Twitter Cards with site attribution provides access to <a href=\"https://analytics.twitter.com/\">Twitter Analytics</a> for detailed information about your site's Twitter audience including top sharers and engagement data."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Provide a custom link preview title and description for each post from your site's post editor."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Add a <a href=\"https://dev.twitter.com/web/follow-button\">Twitter follow button</a> with a WordPress widget, shortcode, or by pasting a Twitter profile link into a post."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Display a <a href=\"https://www.periscope.tv/embed\">Periscope On Air button</a> by pasting a Periscope profile URL into article content. Customize advanced options using a shortcode."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Add a Twitter or Periscope username to a WordPress profile page for easy reference to your authors' external accounts. The plugin includes author attribution for posts and can dynamically include Twitter follow or Periscope On Air buttons through a shortcode when account information exists."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Add a Twitter audience pixel or <a href=\"https://support.twitter.com/articles/20170807-conversion-tracking-for-websites\" title=\"Twitter advertising conversion tracking\">track advertising conversions</a> by adding an advertising pixel through a simple shortcode."
+msgstr ""
+
+#. Found in description paragraph.
+msgid ""
+"<strong>Docs and active development</strong><br />\n"
+"  Contribute to the plugin, submit pull requests, or run test suites through the <a href=\"https://github.com/twitter/wordpress\">Twitter plugin for WordPress GitHub repository</a>.\n"
+"  View <a href=\"https://dev.twitter.com/web/wordpress\">Twitter for WordPress documentation</a> to learn more about customization through WordPress filters."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Add the Twitter plugin to your WordPress installation"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin through the 'Plugins' menu in WordPress"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Remove Tweet button options for share count and align display, matching Twitter's changes"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Convert Twitter profile URLs into a Follow button"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Enable language packs loaded from WordPress.org"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Display multiple Tweets in a <a href=\"https://dev.twitter.com/web/embedded-timelines/collection#template-grid\">media-rich responsive grid template</a> by pasting a Twitter collection URL "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add a <a href=\"https://www.periscope.tv/embed\">Periscope On Air button</a> through a widget, shortcode, or as an embed handler for a Periscope profile URL"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add a Vine through a URL or shortcode"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Shortcode UI integration now uses the <code>register_shortcode_ui</code> action introduced in Shortcake 0.5.0"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Embed a Twitter Moment by simply pasting a URL"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Always load Twitter ads conversion tracking JavaScript over HTTPS"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Shortcodes now include inline asynchronous JavaScript loaders for improved compatibility with ajax-loaded content"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Twitter announced photo, gallery, and product Twitter Cards are <a href=\"https://twittercommunity.com/t/deprecating-the-photo-gallery-and-product-cards/38961\" title=\"Twitter announcement: deprecation of photo, gallery, product cards\">no longer supported</a>. Removed from plugin"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add <a href=\"https://wordpress.org/plugins/shortcode-ui/\" title=\"Shortcake WordPress plugin\">Shortcake plugin</a> compatibility for form-based shortcode construction and previews"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improved Twitter Card image compatibility"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Display admin notice if plugin is installed on a site not meeting minimum PHP requirement"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Disable Tweet button the_content wrapper when called during excerpt generation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweet button: add support for via shortcode attribute"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix: save Follow button widget with no overrides"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Embedded Tweet"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Embedded Tweet with video template"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweet button"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Twitter Cards"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Follow button"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Advertising tracker for Twitter custom audiences and ad conversion"
+msgstr ""
+
+#. Found in faq header.
+msgid "How can I change an embedded Tweet's background and link colors to match my site's theme?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How do I include an embedded timeline in my page?"
+msgstr ""
+
+#. Found in faq header.
+msgid "My custom link color and border color do not appear in embedded Tweets or timelines"
+msgstr ""
+
+#. Found in faq header.
+msgid "Does the Twitter plugin add additional tracking of my site's visitors?"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "The Twitter plugin for WordPress includes a settings page with options to customize the background color, link color, and border color used in Twitter embedded Tweets and embedded timelines."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Paste a Twitter collection URL into your post content to see a media-rich grid display on your website."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Log in to Twitter.com and visit the <a href=\"https://twitter.com/settings/widgets\">Twitter widgets settings page</a> to create and manage user, list, and search <a href=\"https://dev.twitter.com/web/embedded-timelines\">embedded timeline</a> widgets for your account. Widget settings are saved to a widget identifier for the logged in account; you may want to create a widget from your site's account, not your personal account, for continuity and general organization. Copy-and-paste the HTML generated by the Twitter widgets configuration tool into a new <a href=\"http://codex.wordpress.org/WordPress_Widgets#Using_Text_Widgets\">WordPress text widget</a>."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Your site may have a <a href=\"https://developer.mozilla.org/docs/Web/Security/CSP/Introducing_Content_Security_Policy\">Content Security Policy</a> blocking Twitter's JavaScript from inserting your custom styling into the widget."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "You may have configured an embedded timeline widget with a non-default link color. Your widget configuration overrides your page / theme configuration."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "The Twitter plugin for WordPress makes it easier to explicitly include Twitter features and functionality on your WordPress site. No additional tracking is added as a result of our plugin code's execution on your server(s)."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Twitter widgets and buttons load Twitter's widgets.js library through the WordPress JavaScript queue. Read more about <a href=\"https://dev.twitter.com/web/overview/privacy\">how Twitter for Websites widgets respect user privacy</a>."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Twitter advertising trackers are only included on the page when invoked by the site using the <code>twitter_tracking</code> shortcode. Read more about <a href=\"https://support.twitter.com/articles/20171365-policies-for-conversion-tracking-and-tailored-audiences\">Twitter's policies for conversion tracking and tailored audiences products</a>."
+msgstr ""

@@ -28,7 +28,8 @@
 				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
 				get_the_title()
 			) );
-
+		?>
+		<?php
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
 				'after'       => '</div>',
