@@ -20,47 +20,94 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<!-- .latest-wrap -->
+			<div class="entry-latest-wrap content-block">
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
+        <?php if ( have_posts() ) : ?>
 
-			<?php
-			// Start the loop.
-			while ( have_posts() ) : the_post();
+				<div class="entry-large-latest">
+					<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<div class="entry-large-latest_inner">
+							<dl class="entry-list-item">
+								<dt class="entry-list-thumbnail"><?php twentysixteen_post_thumbnail(); ?></dt>
+								<dd class="entry-list-information">
+									<h2 class="entry-list-title">
+										<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+									</h2>
+									<ul class="entry-list-information-sub">
+										<li class="entry-list-category"><?php the_category(' '); ?></li>
+										<li class="entry-list-date"><?php the_time('Y/m/d'); ?></li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</section><!-- #post-## -->
+				</div>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				<div class="entry-list-latest"><!-- 2件目以降 -->	
+          <?php while ( have_posts() ) : the_post(); ?>
+						<?php if (!is_first()) : ?>		 
 
-			// End the loop.
-			endwhile;
+					<dl class="entry-list-item">
+						<dt class="entry-list-thumbnail">
+							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+						</dt>
+						<dd class="entry-list-information">
+							<ul class="entry-list-information-sub">
+								<li class="entry-list-category"><?php the_category(' '); ?></li>
+								<li class="entry-list-date"><?php the_time('Y/m/d'); ?></li>
+							</ul>
+							<h2 class="entry-list-title">
+								<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+							</h2>
+						</dd>
+					</dl>
+						<?php endif; ?>
+					<?php endwhile; ?>
+				</div><!-- 2件目以降 -->
 
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-				'next_text'          => __( 'Next page', 'twentysixteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-			) );
+				<?php endif; ?>
 
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'template-parts/content', 'none' );
-		?>
-
-		<?php endif; ?>
-
-			<!-- .top-sidebar -->
-			<div class="top-sidebar">
-				<?php get_sidebar(); ?>
 			</div>
-			<!-- /.top-sidebar -->
+			<!-- /.latest-wrap -->
+
+			<div class="content-block">
+			  <!-- 特定のタグ(ピックアップ)が表示された時 -->
+			  <?php $wp_query = new WP_Query(array(
+			    'tag' => 'pickup',
+			    'posts_per_page' => 4
+			    ));
+			  ?>
+			  <?php if ($wp_query->have_posts()): ?>
+
+					<div class="entry-list-pickup">
+					<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+
+						<dl class="entry-list-item">
+							<dt class="entry-list-thumbnail">
+								<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+							</dt>
+							<dd class="entry-list-information">
+								<ul class="entry-list-information-sub">
+									<li class="entry-list-category"><?php the_category(' '); ?></li>
+									<li class="entry-list-date"><?php the_time('Y/m/d'); ?></li>
+								</ul>
+								<p class="entry-list-title">
+									<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+								</p>
+							</dd>
+						</dl>
+					<?php endwhile; ?>
+					</div>
+
+			  <?php else : ?>
+			    コンテンツが見つかりませんでした。
+			  <?php endif;
+			    wp_reset_postdata();
+			   ?>
+			  <!-- /特定のタグ(ピックアップ)が表示された時 -->
+			</div><!-- /.latest-wrap -->
+
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->

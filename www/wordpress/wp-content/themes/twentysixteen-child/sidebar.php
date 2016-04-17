@@ -8,39 +8,32 @@
  */
 ?>
 
-  <?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
-    <aside id="secondary" class="sidebar widget-area" role="complementary"><!-- .sidebar .widget-area -->
-      <?php dynamic_sidebar( 'sidebar-1' ); ?>
-    </aside><!-- /.sidebar .widget-area -->
-  <?php endif; ?>
-
-
+<?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
+  <aside id="secondary" class="sidebar widget-area" role="complementary">
 
 <?php if (!is_home()) : ?>
 
-<?php else : ?>
-
   <!-- 特定のタグ(ピックアップ)が表示された時 -->
   <?php $wp_query = new WP_Query(array(
-    'tag_id' => 'pickup',
+    'tag' => 'pickup',
     'posts_per_page' => 4
     ));
   ?>
   <?php if ($wp_query->have_posts()): ?>
 
-      <div class="list-entry-pickup">
+      <div class="entry-list-pickup">
     <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
-        <dl class="list-item-entry">
-          <dt class="list-entry-thumbnail">
+        <dl class="entry-list-item">
+          <dt class="entry-list-thumbnail">
             <a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
           </dt>
-          <dd class="list-entry-information">
-            <ul class="list-entry-information-sub">
-              <li class="list-entry-category"><?php the_category(' '); ?></li>
-              <li class="list-entry-date"><?php the_time('Y/m/d'); ?></li>
+          <dd class="entry-list-information">
+            <ul class="entry-list-information-sub">
+              <li class="entry-list-category"><?php the_category(' '); ?></li>
+              <li class="entry-list-date"><?php the_time('Y/m/d'); ?></li>
             </ul>
-            <p class="list-entry-title">
+            <p class="entry-list-title">
               <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
             </p>
           </dd>
@@ -55,4 +48,14 @@
    ?>
   <!-- /特定のタグ(ピックアップ)が表示された時 -->
 
+<?php else : ?>
+
+
+
 <?php endif; ?>
+
+<!-- .sidebar .widget-area -->
+    <?php dynamic_sidebar( 'sidebar-1' ); ?>
+  </aside><!-- /.sidebar .widget-area -->
+<?php endif; ?>
+

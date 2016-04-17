@@ -32,9 +32,9 @@
 			<div class="site-header-main"><!-- .site-header-main -->
 				<div class="site-branding">
 					<?php if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/logo_hares.png" width="140" alt="HARES"></a></h1>
 					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/logo_hares.png" width="140" alt="HARES"></a></p>
 					<?php endif;
 
 					$description = get_bloginfo( 'description', 'display' );
@@ -63,111 +63,6 @@
 								 ) );
 							?>
 						</nav>
-<nav class="main-navigation">
-	<div class="menu-header-navigation-container">
-    <ul id="menu-header-navigation" class="primary-menu">
-<?php
-$args=array(
-  'hide_empty' => '0',
-  'orderby' => 'name',
-  'order' => 'ASC'
-  );
-$categories=get_categories($args);
-  foreach($categories as $category) { 
-    echo '<li class=""><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> </li> ';
-  } 
-?>
-		</ul>
-	</div>
-</nav>
-
-ーーーー
-<!-- test -->
-  <div class="mask">
-    <ul class="list">
-      <li><a href="/">Alpha</a></li>
-      <li><a href="/">Beta</a></li>
-      <li><a href="/">Gamma</a></li>
-      <li><a href="/">Delta</a></li>
-      <li><a href="/">Alpha</a></li>
-      <li><a href="/">Beta</a></li>
-      <li><a href="/">Gamma</a></li>
-      <li><a href="/">Delta</a></li>
-      <li><a href="/">Alpha</a></li>
-      <li><a href="/">Beta</a></li>
-      <li><a href="/">Gamma</a></li>
-      <li><a href="/">Delta</a></li>
-    </ul>
-  </div>
-<!-- /test -->
-ーーー
-<!-- 自作ナビゲーション -->
-▼ここ
-<nav class="nav_sp">
-	<div class="navigation_sp_wrap">
-		<ul class="navigation_sp">
-			<li class="cat-item">
-				<a href="<?php echo home_url('/column'); ?>">INTERVIEW</a>
-			</li>
-			<li class="cat-item">
-				<ul class="children">
-					<li class="cat-item"><a href="<?php echo home_url('/column/side-business-column/'); ?>">副業</a>
-					</li>
-						<li class="cat-item"><a href="<?php echo home_url('/column/column-child-care/'); ?>">子育て</a>
-					</li>
-				</ul>
-			</li>
-			<li class="cat-item">
-				<a href="<?php echo home_url('/column'); ?>">JOBS</a>
-				<ul class="children">
-					<li class="cat-item"><a href="<?php echo home_url('/column/side-business-column/'); ?>">副業</a>
-					</li>
-						<li class="cat-item"><a href="<?php echo home_url('/column/column-child-care/'); ?>">子育て</a>
-					</li>
-					<li class="cat-item"><a href="<?php echo home_url('/column/side-business-column/'); ?>">副業</a>
-					</li>
-						<li class="cat-item"><a href="<?php echo home_url('/column/column-child-care/'); ?>">子育て</a>
-					</li>
-				</ul>
-			</li>
-			<li class="cat-item">
-				<a href="<?php echo home_url('/column'); ?>">COLUMN</a>
-				<ul class="children">
-					<li class="cat-item"><a href="<?php echo home_url('/column/side-business-column/'); ?>">副業</a>
-					</li>
-						<li class="cat-item"><a href="<?php echo home_url('/column/column-child-care/'); ?>">子育て</a>
-					</li>
-				</ul>
-			</li>
-			<li class="cat-item">
-				<a href="<?php echo home_url('/column'); ?>">NEWS</a>
-				<ul class="children">
-					<li class="cat-item"><a href="<?php echo home_url('/column/side-business-column/'); ?>">メディア露出情報</a>
-					</li>
-						<li class="cat-item"><a href="<?php echo home_url('/column/column-child-care/'); ?>">HARESニュース</a>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</nav>
-ああああ
-<nav class="nav_sp">
-<div class="navigation_sp_wrap">
-<ul class="navigation_sp">
-<?php 
-    $args = array(
-	'child_of'           => 0,
-	'hide_empty'         => 0,
-	'title_li'           => __( '' )
-    );
-    wp_list_categories( $args );
-?>
-</ul>
-</div>
-</nav>
-▲まで
-<!-- /自作ナビゲーション -->
 
 
 

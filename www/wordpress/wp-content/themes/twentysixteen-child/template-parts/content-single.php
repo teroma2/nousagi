@@ -10,19 +10,25 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header"><!-- .entry-header -->
-		<?php twentysixteen_post_thumbnail(); ?>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<?php twentysixteen_excerpt(); ?>
+		<!-- .list-item-entry -->
+			<dl class="list-item-entry">
+				<dt class="list-entry-thumbnail">
+					<a href="<?php the_permalink() ?>"><?php twentysixteen_post_thumbnail(); ?></a>
+					<h1 class="list-entry-title">
+						<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+					</h1>
+				</dt>
+				<dd class="list-entry-information">
+					<ul class="list-entry-information-sub">
+						<li class="list-entry-category"><?php the_category(' '); ?></li>
+						<li class="list-entry-date"><span class="genericon genericon-day"></span><?php the_time('Y/m/d（D）'); ?></li>
+					</ul>
+				</dd>
+			</dl>
+		<!-- /.list-item-entry -->
 
 	</header><!-- /.entry-header -->
-
-	<footer class="entry-footer"><!-- .entry-footer -->
-		<?php twentysixteen_entry_meta(); ?>
-	</footer><!-- /.entry-footer -->
-
-
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -35,12 +41,15 @@
 				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
-
+		?>
+	</div><!-- .entry-content -->
+	<footer class="entry-footer"><!-- .entry-footer -->
+		<?php
 			if ( '' !== get_the_author_meta( 'description' ) ) {
 				get_template_part( 'template-parts/biography' );
 			}
 		?>
+	</footer><!-- /.entry-footer -->
 
-	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
