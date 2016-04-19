@@ -35,31 +35,39 @@
 										<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 									</h2>
 									<ul class="entry-list-information-sub">
-										<li class="entry-list-category"><?php the_category(' '); ?></li>
 										<li class="entry-list-date"><?php the_time('Y/m/d'); ?></li>
+										<li class="entry-list-category"><?php the_category(' '); ?></li>
 									</ul>
 								</dd>
-							</dl>
+							</dl><?php the_excerpt(); ?>
+							<div class="entry-list-content"><?php twentysixteen_excerpt(); ?></div>
 						</div>
 					</section><!-- #post-## -->
 				</div>
 
 				<div class="entry-list-latest"><!-- 2件目以降 -->	
+					<h2 class="entry-list-headline">RECENT</h2>
           <?php while ( have_posts() ) : the_post(); ?>
-						<?php if (!is_first()) : ?>		 
-
+						<?php if (!is_first()) : ?>
 					<dl class="entry-list-item">
 						<dt class="entry-list-thumbnail">
 							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
 						</dt>
 						<dd class="entry-list-information">
-							<ul class="entry-list-information-sub">
-								<li class="entry-list-category"><?php the_category(' '); ?></li>
-								<li class="entry-list-date"><?php the_time('Y/m/d'); ?></li>
-							</ul>
-							<h2 class="entry-list-title">
-								<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-							</h2>
+            <p class="entry-list-category"><?php the_category(' '); ?></p>
+							<p class="entry-list-date"><?php the_time('Y/m/d'); ?></p>
+							<h4 class="entry-list-title">
+								<a href="<?php the_permalink() ?>">
+									<?php 
+										if(mb_strlen($post->post_title)>20) { 
+											$title= mb_substr($post->post_title,0,20) ; echo $title. '…' ; 
+										} else { 
+											echo $post->post_title;
+										} 
+									?>
+								</a>
+							</h4>
+
 						</dd>
 					</dl>
 						<?php endif; ?>
@@ -89,8 +97,8 @@
 							</dt>
 							<dd class="entry-list-information">
 								<ul class="entry-list-information-sub">
-									<li class="entry-list-category"><?php the_category(' '); ?></li>
 									<li class="entry-list-date"><?php the_time('Y/m/d'); ?></li>
+									<li class="entry-list-category"><?php the_category(' '); ?></li>
 								</ul>
 								<p class="entry-list-title">
 									<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
