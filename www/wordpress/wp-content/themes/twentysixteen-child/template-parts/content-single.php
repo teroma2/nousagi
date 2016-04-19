@@ -38,6 +38,9 @@
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<p class="entry-date-update"><?php if ($mtime = get_mtime('Y/m/d')) echo '最終更新日: ', $mtime; ?></p>
+	</div><!-- .entry-content -->
+	<footer class="entry-footer"><!-- .entry-footer -->
+		<div>ソーシャルボタンを出す</div>
 		<?php
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
@@ -47,13 +50,6 @@
 				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
-		?>
-	</div><!-- .entry-content -->
-	<footer class="entry-footer"><!-- .entry-footer -->
-		<?php
-			if ( '' !== get_the_author_meta( 'description' ) ) {
-				get_template_part( 'template-parts/biography' );
-			}
 		?>
 	</footer><!-- /.entry-footer -->
 
