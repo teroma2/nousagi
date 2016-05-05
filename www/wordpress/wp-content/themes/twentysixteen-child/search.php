@@ -13,10 +13,13 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
+		<div class="search-result-wrap">
 			<header class="page-header">
 				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentysixteen' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
+
+
+			<ul class="search-entry-list">
 
 			<?php
 			// Start the loop.
@@ -45,9 +48,11 @@ get_header(); ?>
 
 		endif;
 		?>
+			</ul><!-- /.archive-entry-list -->
 
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
+		</div><!-- /.search-result-wrap -->
+		</main><!-- /.site-main -->
+	</section><!-- /.content-area -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

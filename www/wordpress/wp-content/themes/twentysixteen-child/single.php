@@ -13,26 +13,23 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 
-		<!-- .latest-wrap -->
+		<!-- .entry-normal-wrap -->
 		<div class="entry-normal-wrap content-block">
 
 			<div class="entry-normal-main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'template-parts/content', 'single' ); ?>
-				<?php if ( comments_open() || get_comments_number() ): ?>
-				  <?php comments_template(); ?>
-				<?php endif; ?>
 
 				<?php if ( is_singular( 'attachment' ) ): ?>
 				    the_post_navigation( array(
 				      'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'twentysixteen' ),
 				<?php elseif ( is_singular( 'post' ) ): ?>
 				<ul class="post-pager">
-					<li class="post-title">
-						<?php previous_post_link('&laquo; %link', '前の記事へ', true); ?>
+					<li class="post-title prev">
+						<?php previous_post_link('%link', '&lt; 前の記事', true); ?>
 					</li>
-					<li class="post-title">
-						<?php next_post_link('%link &raquo;', '次の記事へ', true); ?>
+					<li class="post-title next">
+						<?php next_post_link('%link', '次の記事 &gt;', true); ?>
 					</li>
 				</ul>
 		    <?php endif; ?>

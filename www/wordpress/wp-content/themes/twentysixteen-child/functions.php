@@ -27,3 +27,9 @@ function get_mtime($format) {
         return get_the_modified_time($format);
     }
 }
+
+// 記事の自動整形の制御
+remove_filter('the_content', 'wpautop');
+// 記事の自動整形を無効にする
+remove_filter('the_excerpt', 'wpautop');
+// 抜粋の自動整形を無効にする

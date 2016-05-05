@@ -12,21 +12,21 @@
 	<header class="entry-header"><!-- .entry-header -->
 
 		<!-- .list-item-entry -->
-			<dl class="list-entry-item">
-				<dt class="list-entry-thumbnail">
+			<dl class="c-entry-meta">
+				<dt class="c-entry-thumbnail">
 					<a href="<?php the_permalink() ?>"><?php twentysixteen_post_thumbnail(); ?></a>
 				</dt>
-				<dd class="list-entry-information">
-					<ul class="list-entry-information-sub">
-						<li class="list-entry-date">
-							<span class="genericon genericon-month"></span>
-							<span class="list-entry-date-publish"><?php the_time('Y/m/d（D）'); ?></span>
-						</li>
-						<li class="list-entry-category">
+				<dd class="c-entry-information">
+					<ul class="c-entry-information-sub">
+						<li class="c-entry-category">
 							<?php the_category(' '); ?>
 						</li>
+						<li class="c-entry-date">
+							<span class="genericon genericon-month"></span>
+							<span class="c-entry-date-publish"><?php the_time('Y/m/d（D）'); ?></span>
+						</li>
 					</ul>
-					<h1 class="list-entry-title">
+					<h1 class="c-entry-title">
 						<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 					</h1>
 				</dd>
@@ -37,7 +37,7 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<p class="entry-date-update"><?php if ($mtime = get_mtime('Y/m/d')) echo '最終更新日: ', $mtime; ?></p>
+		<p class="c-entry-date-update"><?php if ($mtime = get_mtime('Y/m/d')) echo '最終更新日: ', $mtime; ?></p>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer"><!-- .entry-footer -->
 		<div>ソーシャルボタンを出す</div>

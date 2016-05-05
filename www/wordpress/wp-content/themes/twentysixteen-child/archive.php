@@ -25,6 +25,8 @@ get_header(); ?>
 			<!-- .archive-wrap -->
 			<div class="archive-wrap content-block">
 
+				<div class="archive-main"><!-- .archive-main -->
+					<ul class="archive-entry-list"><!-- .archive-entry-list -->
 			<?php if ( have_posts() ) : ?>
 
 				<?php
@@ -54,10 +56,22 @@ get_header(); ?>
 
 			endif;
 			?>
+					</ul><!-- /.archive-entry-list -->
+				</div><!-- /.archive-main -->
+
+				<!-- .archive-side -->
+				<div class="archive-side">
+
+					<?php get_sidebar(); ?>
+				</div>
+				<!-- /.archive-side -->
+
+
 			</div>
 			<!-- /.archive-wrap -->
+
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

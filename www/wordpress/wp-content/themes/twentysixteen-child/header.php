@@ -32,9 +32,9 @@
 			<div class="site-header-main"><!-- .site-header-main -->
 				<div class="site-branding">
 					<?php if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/logo_hares.png" width="140" alt="HARES"></a></h1>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/logo_rgb_horizontal_s.png" width="140" alt="HARES"></a></h1>
 					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/logo_hares.png" width="140" alt="HARES"></a></p>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/logo_rgb_horizontal_s.png" width="140" alt="HARES"></a></p>
 					<?php endif;
 
 					$description = get_bloginfo( 'description', 'display' );
